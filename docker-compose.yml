@@ -1,0 +1,54 @@
+version: '3'
+services:
+  nginx:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./docker/nginx
+    volumes:
+    - ./src/:/var/www
+    ports:
+    - "8080:80"
+    - "8090:8090"
+    depends_on:
+    - php-fpm
+  php-fpm:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./docker/php-fpm
+    volumes:
+    - ./src/:/var/www
+    depends_on:
+    - postgres
+    environment:
+      XDEBUG_CONFIG: "remote_enable=1"
+      XDEBUG_CONFIG: "remote_host=host.docker.internal"
+      PHP_IDE_CONFIG: "serverName=Docker"
+  postgres:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./docker/db
+    volumes:
+    - data:/var/lib/postgresql/data
+    environment:
+    - POSTGRES_USER=app
+    - POSTGRES_PASSWORD=secret
+    - POSTGRES_MULTIPLE_DATABASES="app","app_test"
+    ports:
+    - "54321:5432"
+    command:  postgres -c fsync=off  -c synchronous_commit=off  -c  full_page_writes=off
+#  node:
+#    build:
+#      dockerfile: ./Dockerfile
+#      context: ./docker/node
+#    #    ports:
+#    #    - 8080:8080
+#    volumes:
+#    - ./src/:/var/www
+#    - ./root:/root
+#    - modules:/var/www/node_modules
+#    tty: true
+#    working_dir: /var/www
+volumes:
+  data:
+    external: true
+  modules:
