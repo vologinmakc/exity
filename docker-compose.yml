@@ -31,10 +31,9 @@ services:
     ports:
         - "33061:3306"
     environment:
-      - MYSQL_DATABASE="exity"
       - MYSQL_USER="root"
-      - MYSQL_PASSWORD="root"
-      - MYSQL_ROOT_PASSWORD="root"
+      - MYSQL_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root
     volumes:
         - ./MySQL:/var/lib/mysql
 
