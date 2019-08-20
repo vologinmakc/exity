@@ -85,13 +85,13 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs">Бик</a>
+                    <a href="https://laracasts.com">Баращ</a>
+                    <a href="https://laravel-news.com">Кабин</a>
+                    <a href="https://blog.laravel.com">Строгий</a>
+                    <a href="https://nova.laravel.com">Сера</a>
+                    <a href="https://forge.laravel.com">Жеский</a>
+                    <a href="https://github.com/laravel/laravel">Мука</a>
                 </div>
             </div>
         </div>
