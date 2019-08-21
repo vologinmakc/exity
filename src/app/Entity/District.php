@@ -4,7 +4,7 @@ namespace App\Entity;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Street extends Model
+class District extends Model
 {
-   //
+    protected $table = 'district';
 }
