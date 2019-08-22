@@ -13,6 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+});*/
+
+Route::group(
+    [
+        'middleware' => 'auth:api',
+        'prefix' => 'oauth'
+    ],
+    function () {
+        Route::post('signout', 'Auth\ApiPublicSignoutController')->name('local.oauth.signout');
+    }
+);
