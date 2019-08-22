@@ -6,11 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Console\\Commands\\MakeUserCommand' => $baseDir . '/app/Console/Commands/MakeUserCommand.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Entity\\Address' => $baseDir . '/app/Entity/Address.php',
     'App\\Entity\\Comment' => $baseDir . '/app/Entity/Comment.php',
     'App\\Entity\\District' => $baseDir . '/app/Entity/District.php',
     'App\\Entity\\Street' => $baseDir . '/app/Entity/Street.php',
+    'App\\Entity\\User' => $baseDir . '/app/Entity/User.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -32,7 +34,6 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
-    'App\\User' => $baseDir . '/app/User.php',
     'Barryvdh\\Debugbar\\Console\\ClearCommand' => $vendorDir . '/barryvdh/laravel-debugbar/src/Console/ClearCommand.php',
     'Barryvdh\\Debugbar\\Controllers\\AssetController' => $vendorDir . '/barryvdh/laravel-debugbar/src/Controllers/AssetController.php',
     'Barryvdh\\Debugbar\\Controllers\\BaseController' => $vendorDir . '/barryvdh/laravel-debugbar/src/Controllers/BaseController.php',
@@ -45,6 +46,7 @@ return array(
     'Barryvdh\\Debugbar\\DataCollector\\GateCollector' => $vendorDir . '/barryvdh/laravel-debugbar/src/DataCollector/GateCollector.php',
     'Barryvdh\\Debugbar\\DataCollector\\LaravelCollector' => $vendorDir . '/barryvdh/laravel-debugbar/src/DataCollector/LaravelCollector.php',
     'Barryvdh\\Debugbar\\DataCollector\\LogsCollector' => $vendorDir . '/barryvdh/laravel-debugbar/src/DataCollector/LogsCollector.php',
+    'Barryvdh\\Debugbar\\DataCollector\\ModelsCollector' => $vendorDir . '/barryvdh/laravel-debugbar/src/DataCollector/ModelsCollector.php',
     'Barryvdh\\Debugbar\\DataCollector\\MultiAuthCollector' => $vendorDir . '/barryvdh/laravel-debugbar/src/DataCollector/MultiAuthCollector.php',
     'Barryvdh\\Debugbar\\DataCollector\\QueryCollector' => $vendorDir . '/barryvdh/laravel-debugbar/src/DataCollector/QueryCollector.php',
     'Barryvdh\\Debugbar\\DataCollector\\RequestCollector' => $vendorDir . '/barryvdh/laravel-debugbar/src/DataCollector/RequestCollector.php',
@@ -1656,6 +1658,7 @@ return array(
     'Illuminate\\Translation\\TranslationServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Translation/TranslationServiceProvider.php',
     'Illuminate\\Translation\\Translator' => $vendorDir . '/laravel/framework/src/Illuminate/Translation/Translator.php',
     'Illuminate\\Validation\\ClosureValidationRule' => $vendorDir . '/laravel/framework/src/Illuminate/Validation/ClosureValidationRule.php',
+    'Illuminate\\Validation\\Concerns\\FilterEmailValidation' => $vendorDir . '/laravel/framework/src/Illuminate/Validation/Concerns/FilterEmailValidation.php',
     'Illuminate\\Validation\\Concerns\\FormatsMessages' => $vendorDir . '/laravel/framework/src/Illuminate/Validation/Concerns/FormatsMessages.php',
     'Illuminate\\Validation\\Concerns\\ReplacesAttributes' => $vendorDir . '/laravel/framework/src/Illuminate/Validation/Concerns/ReplacesAttributes.php',
     'Illuminate\\Validation\\Concerns\\ValidatesAttributes' => $vendorDir . '/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php',
