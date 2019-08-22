@@ -3,8 +3,6 @@
 /src/public/storage
 /src/storage/*.key
 /storage/debugbar
-/src/vendor
-/vendor
 /.idea
 /.vscode
 /nbproject
