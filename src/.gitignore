@@ -4,6 +4,7 @@
 /src/storage/*.key
 /storage/debugbar
 /src/vendor
+/vendor
 /.idea
 /.vscode
 /nbproject
