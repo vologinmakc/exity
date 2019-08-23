@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ApiPublicSignoutController extends Controller
+class ApiPublicSignInController extends Controller
 {
     /**
      * @param Request $request
@@ -21,7 +21,7 @@ class ApiPublicSignoutController extends Controller
             ? $data['grant_type']
             : 'password';
 
-        $request = Request::create('/api/oauth/token', 'POST', $data);
+        $request = Request::create('/oauth/token', 'POST', $data);
 
         return app()->handle($request);
     }
