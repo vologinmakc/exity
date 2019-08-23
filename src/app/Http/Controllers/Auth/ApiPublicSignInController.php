@@ -21,7 +21,7 @@ class ApiPublicSignInController extends Controller
             ? $data['grant_type']
             : 'password';
 
-        $request = Request::create('/api/oauth/token', 'POST', $data);
+        $request = Request::create('/oauth/token', 'POST', $data);
 
         return app()->handle($request);
     }
