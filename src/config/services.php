@@ -43,5 +43,9 @@ return [
             'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
         ],
     ],
+    'vue_client' => [
+        'id' => env('VUE_CLIENT_ID'),
+        'secret' => env('VUE_CLIENT_SECRET'),
+    ],
 
 ];

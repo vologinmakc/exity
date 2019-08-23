@@ -19,10 +19,9 @@ use Illuminate\Http\Request;
 
 Route::group(
     [
-        'middleware' => 'auth:api',
         'prefix' => 'oauth'
     ],
     function () {
-        Route::post('signout', 'Auth\ApiPublicSignoutController')->name('local.oauth.signout');
+        Route::post('signin', 'Auth\ApiPublicSignInController');
     }
 );
