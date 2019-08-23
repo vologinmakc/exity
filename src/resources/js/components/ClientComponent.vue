@@ -14,11 +14,9 @@
                         <form>
                             <label for="name">Укажите имя:</label>
                             <input v-model="nam" class="form-control" type="text" id="name" name="user_name">
-                            <p>Введенное имя {{ nam }}</p>
                             <label for="pass">Укажите пароль:</label>
                             <input v-model="pas" class="form-control" type="password" id="pass" name="user_password">
-                            <p>Введенный пароль {{ pas }}</p>
-                            <div class="btn btn-info btn-sm m-2 action-link" id="submit">Отправить</div>
+                            <div class="btn btn-primary" v-on:click="send()">Отправить</div>
                         </form>
                         {{ info }}
                     </div>
@@ -36,14 +34,26 @@
         data() {
             
             return {
-                info: null
+                info: null,
+                nam: '',
+                pas: ''
             };
             
         },
-        mounted() {
+        /*mounted() {
             axios
                 .get('http://localhost.ru:8080/')
                 .then(response => (this.info = response));
+        }*/
+
+        methods: {
+            send(){
+            axios
+                .post('http://localhost.ru:8080/oauth/authorize', this.nam + '/' + this.pas)
+                .then(response => (this.info = response));
+                stop();
         }
+        }
+        
     }
 </script>
