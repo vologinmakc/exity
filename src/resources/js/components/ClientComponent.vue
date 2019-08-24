@@ -36,7 +36,7 @@
             return {
                 info: null,
                 nam: '',
-                pas: ''
+                pas: '',
             };
             
         },
@@ -49,10 +49,18 @@
         methods: {
             send(){
             axios
-                .post('http://localhost.ru:8080/oauth/authorize', this.nam + '/' + this.pas)
-                .then(response => (this.info = response));
-        }
+                //.post('http://localhost.ru:8080/oauth/authorize', this.nam + '/' + this.pas)
+                .post('http://localhost.ru:8080/oauth/authorize', 
+                {
+                    username: this.nam,
+                    password: this.pas
+
+                })
+                .then(response => (this.info = response, console.log(response)))
+                .catch(error => (console.log(error)))
         }
         
+        
+    }
     }
 </script>
