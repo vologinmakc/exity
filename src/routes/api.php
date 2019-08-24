@@ -35,3 +35,13 @@ Route::group(
         Route::get('/', 'Street\StreetController@index');
     }
 );
+
+Route::group(
+    [
+        'middleware' => ['auth:api'],
+        'prefix' => 'districts'
+    ],
+    function () {
+        Route::get('/', 'District\DistrictController@index');
+    }
+);
