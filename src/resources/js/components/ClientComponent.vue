@@ -51,7 +51,6 @@
             axios
                 .post('http://localhost.ru:8080/oauth/authorize', this.nam + '/' + this.pas)
                 .then(response => (this.info = response));
-                stop();
         }
         }
         
