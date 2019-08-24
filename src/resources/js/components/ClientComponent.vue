@@ -50,7 +50,7 @@
             send(){
             axios
                 //.post('http://localhost.ru:8080/oauth/authorize', this.nam + '/' + this.pas)
-                .post('http://localhost.ru:8080/oauth/authorize', 
+                .post('http://localhost.ru:8080/api/oauth/signin', 
                 {
                     username: this.nam,
                     password: this.pas
