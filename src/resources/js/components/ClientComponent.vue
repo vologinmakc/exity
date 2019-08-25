@@ -18,7 +18,6 @@
                             <input v-model="pas" class="form-control" type="password" id="pass" name="user_password">
                             <div class="btn btn-primary" v-on:click="send()">Отправить</div>
                         </form>
-                        {{ info }}
                     </div>
                 </div>
             </div>
@@ -56,7 +55,11 @@
                     password: this.pas
 
                 })
-                .then(response => (this.info = response, console.log(response)))
+                //.then(response => (this.info = response, console.log(response)))
+                .then(response => (this.info = response, this.$emit('login', {
+                token: this.info.data.access_token
+    }),this.$emit('remove') ))
+                //.catch(error => (console.log(error)))
                 .catch(error => (console.log(error)))
         }
         

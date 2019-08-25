@@ -13,7 +13,7 @@
 </head>
 <body>
 <div id="app">
-    <client-component></client-component>
+    
 </div>
 <script src="{{ URL::asset('js/app.js')}}"></script>
 </body>
