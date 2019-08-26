@@ -25,3 +25,13 @@ Route::group(
         Route::post('signin', 'Auth\ApiPublicSignInController');
     }
 );
+
+Route::group(
+    [
+        'middleware' => ['auth:api'],
+        'prefix' => 'streets'
+    ],
+    function () {
+        Route::get('/', 'Street\StreetController@index');
+    }
+);
