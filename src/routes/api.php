@@ -45,3 +45,4 @@ Route::group(
         Route::get('/', 'District\DistrictController@index');
     }
 );
+
