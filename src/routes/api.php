@@ -19,6 +19,7 @@ use Illuminate\Http\Request;
 
 Route::group(
     [
+        'middleware' => ['cors'],
         'prefix' => 'oauth'
     ],
     function () {
